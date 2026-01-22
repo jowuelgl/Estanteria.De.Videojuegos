@@ -121,4 +121,12 @@ btnMostrarFormulario.onclick = () => {
   });
   modal_formulario.style.display = "flex";
 };
+async function cargarJuegos() {
+  const res = await fetch(API_URL);
+  juegos = await res.json();
+  render();
+}
+
+cargarJuegos();
+
 
