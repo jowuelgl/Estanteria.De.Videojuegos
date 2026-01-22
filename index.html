@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Estantería de Videojuegos 3D</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Estantería de Videojuegos 3D</h1>
+</header>
+
+<main>
+    <section id="panel-estanteria">
+        <button id="btnMostrarFormulario">Añadir videojuego</button>
+
+        <div id="estanteria">
+            <div class="balda" data-plataforma="ps4">
+                <div class="balda-titulo">PS4</div>
+                <div class="balda-contenido" data-plataforma="ps4"></div>
+            </div>
+            <div class="balda" data-plataforma="xbox">
+                <div class="balda-titulo">Xbox One</div>
+                <div class="balda-contenido" data-plataforma="xbox"></div>
+            </div>
+            <div class="balda" data-plataforma="switch">
+                <div class="balda-titulo">Nintendo Switch</div>
+                <div class="balda-contenido" data-plataforma="switch"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ESCENA FRONTAL -->
+<div id="escena-frontal" class="oculto">
+    <div id="estuche-3d">
+        <div class="tapa izquierda">
+            <h3 id="detalle-titulo"></h3>
+            <p>Plataforma: <span id="detalle-plataforma"></span></p>
+            <p>Progreso: <span id="detalle-progreso"></span>%</p>
+            <div class="barra">
+                <div class="barra-inner" id="barra-progreso"></div>
+            </div>
+            <p>Horas jugadas: <span id="detalle-horas"></span></p>
+            <button id="btnEditar">Editar</button>
+        </div>
+        <div class="tapa derecha">
+            <div id="cd">
+                <div class="cd-label" id="cd-label"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FORMULARIO -->
+<div id="modal-formulario">
+    <div id="formulario">
+        <h2>Videojuego</h2>
+        <input id="titulo" placeholder="Título">
+        <select id="plataforma">
+            <option value="ps4">PS4</option>
+            <option value="xbox">Xbox One</option>
+            <option value="switch">Switch</option>
+        </select>
+        <input type="number" id="progreso" placeholder="Progreso %">
+        <input type="number" id="horas" placeholder="Horas jugadas">
+        <input type="file" id="imagen">
+        <button id="btnGuardar">Guardar</button>
+        <button id="btnCancelar">Cancelar</button>
+    </div>
+</div>
+
+<audio id="sndOpen" src="assets/sounds/open.mp3"></audio>
+<audio id="sndClose" src="assets/sounds/close.mp3"></audio>
+
+<script src="js/script.js"></script>
+</body>
+</html>

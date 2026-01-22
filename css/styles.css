@@ -1,0 +1,176 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    background:radial-gradient(circle,#1f2933,#020617);
+    font-family:Arial,sans-serif;
+    color:#fff;
+}
+
+header{text-align:center;padding:20px}
+
+#panel-estanteria{max-width:1100px;margin:auto}
+
+#btnMostrarFormulario{
+    width:100%;padding:12px;
+    background:linear-gradient(135deg,#3b82f6,#22c55e);
+    border:none;border-radius:8px;color:#fff;font-weight:bold;
+}
+
+#estanteria{margin-top:20px}
+
+.balda{
+    background:#111827;
+    padding:10px;border-radius:10px;margin-bottom:20px;
+}
+
+.balda-titulo{margin-bottom:8px;font-weight:bold}
+
+.balda-contenido{display:flex;gap:10px}
+
+.caja{
+    width:60px;height:100px;
+    border-radius:6px;
+    cursor:pointer;
+    transform-style:preserve-3d;
+    transition:.4s;
+}
+
+.caja.ps4{background:linear-gradient(#2563eb,#1e3a8a)}
+.caja.xbox{background:linear-gradient(#16a34a,#14532d)}
+.caja.switch{background:linear-gradient(#dc2626,#7f1d1d)}
+
+.caja:hover{transform:translateY(-10px) rotateY(15deg)}
+
+#escena-frontal{
+    position:fixed;inset:0;
+    background:rgba(0,0,0,.7);
+    display:flex;align-items:center;justify-content:center;
+    z-index:50;
+}
+
+#escena-frontal.oculto{display:none}
+
+#estuche-3d{
+    width:600px;height:300px;
+    display:flex;
+    transform-style:preserve-3d;
+    animation:entrar .6s ease;
+}
+
+@keyframes entrar{
+    from{transform:scale(.7) translateY(200px)}
+    to{transform:scale(1)}
+}
+
+.tapa{
+    width:50%;padding:20px;
+}
+
+.izquierda{background:#020617}
+.derecha{background:#000;display:flex;align-items:center;justify-content:center}
+
+#cd{
+    width:160px;height:160px;border-radius:50%;
+    background:conic-gradient(#fff,#999,#fff);
+    display:flex;align-items:center;justify-content:center;
+}
+
+.cd-label{
+    width:90px;height:90px;border-radius:50%;
+    background:#1e293b;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;font-size:12px;
+}
+
+.barra{
+    width:100%;height:10px;background:#020617;margin:5px 0;
+}
+
+.barra-inner{
+    height:100%;background:#22c55e;width:0%;
+}
+
+#modal-formulario{
+    position:fixed;inset:0;background:rgba(0,0,0,.7);
+    display:none;align-items:center;justify-content:center;
+    z-index:60;
+}
+
+#formulario{
+    background:#0f172a;padding:20px;border-radius:10px;
+    width:300px;
+}
+
+#formulario input,#formulario select,#formulario button{
+    width:100%;margin-top:8px;padding:8px;
+}
+.cd-label{
+    background-size:cover;
+    background-position:center;
+    box-shadow:inset 0 0 15px rgba(0,0,0,.6);
+}
+
+/* ===== ESTANTERÍA DE MADERA ===== */
+#estanteria{
+    background:
+        linear-gradient(
+            rgba(0,0,0,.25),
+            rgba(0,0,0,.45)
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #7a4a28 0px,
+            #7a4a28 12px,
+            #8b5a2b 12px,
+            #8b5a2b 24px
+        );
+    border-radius:18px;
+    border:3px solid #3b2414;
+    box-shadow:
+        inset 0 6px 12px rgba(255,255,255,.15),
+        inset 0 -12px 20px rgba(0,0,0,.7),
+        0 35px 70px rgba(0,0,0,.9);
+}
+
+/* ===== BALDAS DE MADERA ===== */
+.balda{
+    background:
+        linear-gradient(
+            rgba(255,255,255,.08),
+            rgba(0,0,0,.35)
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #9c6b3d 0px,
+            #9c6b3d 10px,
+            #b07a45 10px,
+            #b07a45 20px
+        );
+    border:2px solid #4b2e1a;
+    border-radius:12px;
+    box-shadow:
+        inset 0 4px 6px rgba(255,255,255,.15),
+        inset 0 -8px 14px rgba(0,0,0,.6),
+        0 18px 30px rgba(0,0,0,.8);
+    transform:rotateX(8deg);
+}
+
+/* Línea frontal de la balda (más madera oscura) */
+.balda-linea{
+    background:
+        linear-gradient(
+            to bottom,
+            #3b2414,
+            #2a170c
+        );
+    height:10px;
+    box-shadow:
+        inset 0 3px 4px rgba(255,255,255,.1),
+        inset 0 -4px 6px rgba(0,0,0,.8);
+}
+
+/* Texto de plataforma */
+.balda-titulo{
+    color:#fde68a;
+    text-shadow:
+        0 2px 2px rgba(0,0,0,.8);
+}
