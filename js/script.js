@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbwwiTEuzdhTYCB9sLhIwSy1Jirq58ad5ItSU4fDy9a9dP9D6VQMOant11IgzCB6q_pe/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbwOJIZJ1aDYv9WBop6hqAf7JJ6IK349wcYhWYHUkGcdYca3FxBWPta9smRpfdzX5HZc/exec";
 
 let juegos = [];
 let seleccionado = null;
@@ -121,3 +121,4 @@ btnMostrarFormulario.onclick = () => {
   });
   modal_formulario.style.display = "flex";
 };
+
